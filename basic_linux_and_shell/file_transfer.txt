@@ -1,0 +1,6 @@
+# Created a Ubuntu LTS instance hoth.vm.com
+# Copy luke.txt to the vm /tmp
+scp pmoktali.txt luke@hoth.vm.com:/tmp
+# delete local copy and get back from vm
+rm luke.txt
+scp luke@hoth.vm.com:/tmp/luke.txt ./

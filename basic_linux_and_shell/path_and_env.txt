@@ -1,0 +1,8 @@
+# Get all env and search EDITOR
+printenv | grep 'EDITOR'
+# set EDITOR as vim
+export EDITOR=vim
+# print path
+echo $PATH
+# full path of script 
+which ruby #output: /usr/bin/ruby

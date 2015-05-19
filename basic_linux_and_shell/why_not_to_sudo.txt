@@ -1,0 +1,4 @@
+# when to sudo?
+sudo apt-get install git
+# when not to sudo?
+sudo rm -rf # I have done this in the past! So I know :)

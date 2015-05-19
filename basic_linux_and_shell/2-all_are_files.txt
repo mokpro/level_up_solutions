@@ -1,0 +1,4 @@
+# Files which aren't file like :
+# 	-	devices
+#	-	sockets
+

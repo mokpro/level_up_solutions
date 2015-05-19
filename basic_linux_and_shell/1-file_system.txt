@@ -1,0 +1,7 @@
+# Absolute path
+cd /usr/local/bin
+
+# Relative path
+cd ../lib
+cd ~/level_up
+
