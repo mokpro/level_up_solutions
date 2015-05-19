@@ -1,0 +1,2 @@
+# Clone the repo
+git clone https://github.com/mokpro/level_up_exercises

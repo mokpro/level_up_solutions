@@ -1,0 +1,12 @@
+# touch file and print permissions
+touch /tmp/test
+# user - luke, group - wheel
+
+# change permission to root
+sudo chown root:wheel /tmp/test
+
+# gran read and execute permissions to all
+sudo chmod 755 /tmp/test
+
+# remove write access for root 
+sudo chmod -w /tmp/test
