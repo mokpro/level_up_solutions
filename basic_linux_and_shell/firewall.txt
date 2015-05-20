@@ -1,0 +1,10 @@
+# see all firewall rules
+sudo iptables -n -L -v --line-numbers
+# Why blacklist, not whitelist?
+We can't really predict how and which port will attackers target.
+With a whitelist, we can have short list of ports/apps which can be targetted, so that we can defend them!
+
+# ports being listened at http://scanme.nmap.org/
+
+- 22  ssh
+- 80  http  

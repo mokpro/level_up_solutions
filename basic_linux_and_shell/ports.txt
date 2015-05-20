@@ -1,0 +1,5 @@
+# ports on laptop
+netstat -a
+# list connected/listening app
+netstat -pt
+netstat -ap | grep ssh

@@ -1,0 +1,8 @@
+# see freepace, disk free
+df -i
+# find disk usage recusively from current directory
+du 
+# check memory usage in mac
+top -o mem
+# check cpu usage in mac
+top -o mem

@@ -1,0 +1,5 @@
+# Things to monitor
+# - Disk place
+# - Memory usage/availability
+# - CPU usage
+# - Network Usage (?)

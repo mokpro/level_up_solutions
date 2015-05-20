@@ -1,0 +1,2 @@
+# set date
+ntpdate -s nist1-pa.ustiming.org

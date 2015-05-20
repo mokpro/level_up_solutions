@@ -1,0 +1,8 @@
+# restart service for sshd
+sudo service ssh restart
+sudo /etc/init.d/ssh restart
+
+# see list of options
+service apache2 #output: Usage: apache2 {start|stop|graceful-stop|restart|reload|force-reload|start-htcacheclean|stop-htcacheclean}
+# reload without restart
+sudo service apache2 graceful

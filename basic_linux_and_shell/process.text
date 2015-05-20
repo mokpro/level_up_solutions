@@ -1,0 +1,12 @@
+# Keyboard background process 
+use CTRL+Z
+
+# using command &
+ruby -e 'sleep 1 while true' &
+# bring it to foreground
+fg 
+# list process running ruby
+ps as|grep ruby
+ps -ef| grep ruby
+# kill process
+kill -9 <pid>

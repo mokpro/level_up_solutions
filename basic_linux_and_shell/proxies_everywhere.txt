@@ -1,0 +1,16 @@
+# A typical production environment
+                                ______________                     --------------
+                               |              |                   |              |
+Request---[rebel-base.com]--->|Rebel Base DNS|--->[go.to.hoth]--->|Rebel Security|
+                               |              |                   |              |
+                                ______________                     --------------
+                                                                            |
+                                                                            |
+                                                                            |
+                                                                           \/
+                                                      -----------     ------------
+Response<-----------------------[You are invited]<---|Get weapons|<--|Load Balance|
+                                                      ----------      ------------
+# How these make customers happy?
+- Use CDN's to deliver content faster.
+- User better security to block DDOS attacks
