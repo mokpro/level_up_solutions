@@ -1,0 +1,8 @@
+# Files which aren't file like :
+# 	-	devices
+#	-	sockets
+# when do we read non-files using file descriptors?
+  - Reading and writing to web sockets?
+  - message queues
+# postmaster.pid location in mac
+/Users/<username>/Library/Application\ Support/Postgres/var-9.4
