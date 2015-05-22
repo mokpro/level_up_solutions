@@ -1,0 +1,11 @@
+Why not to trust a developer?
+Well, they are basically humans, so it is hard to write flawless, bug free code!
+Also, developers are focus to get their part of the job done while testers generally have a bigger picuture.
+
+Pitfalls to watch for?
+- Report all the bugs, even if it's minor.
+- Test against facts or requirements, not the ssumptions.
+
+Why we should not be satisfied with testing our own code?
+Writing unit and integration test is useful and important. But this does not end here.
+We need to test the usability and other standards test for making it the product better.

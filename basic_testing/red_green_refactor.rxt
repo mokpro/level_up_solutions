@@ -1,0 +1,15 @@
+How Red-Green-Refactor makes code better?
+
+Firstly, I learnt that tests aren't really test, they are specs. They define how the systems should work.
+
+This is how we need to code:
+  - Red: write test without the actual system codes so they fail
+  - Green: write code so that these tests pass.
+  - Refactor: Now it's yet another DRY day, since you are at work!
+
+
+Some Gyaan in writing tests: Given, When, and Then pattern
+
+Given that One Ring ring is linked to Sauron
+When Frodo drops the ring into Mount Doom
+Then the eye of Sauron would be destroyed.
