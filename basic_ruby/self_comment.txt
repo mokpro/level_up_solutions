@@ -1,0 +1,16 @@
+Why comment lie?
+Being agile programmers, we keep updating code, but no one really updates the comments. Hence they go outdated quickly.
+
+Then how to explain code better?
+Well, write better code! That's it! Ruby makes it easy for devs to write english like code which can make it highly readable.
+
+So what is self documenting code?
+
+A block of code explains itself without a need for a comment.
+We add comments only if there is a complex scenario.
+But mort of the time, write a good test for this complex scenario, which would make it better
+
+
+Wait, no comments? That seems odd. When do we write comments anyway?
+If we have a weird business reason for to write the code, maybe then we comment.
+Another reason is, if we hardcode anything, it's good to have comments to explain them.
