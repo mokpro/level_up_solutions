@@ -1,0 +1,9 @@
+What is 5 second rule of review?
+
+I guess anyone new should be able to say what does a method do with just 5 second of reading time.
+This means we developers have to write code which follows following limits =>
+
+- 100 lines for a class
+- 5 lines for a method
+- max 2 indents, if you need more, then move to a method
+- 80 chars per line
