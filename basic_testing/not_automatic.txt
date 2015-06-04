@@ -1,0 +1,2 @@
+When is manual test preferred?
+User acceptance test is a good example when we need to do manual testing.

@@ -1,0 +1,126 @@
+Shopping Cart:
+
+Attributes:
+  - Easy to use
+  - Consistent across sessions/browsers
+
+Components:
+  - A Cart module
+  - User (has user details which include name, address, credit card etc.)
+  - Transaction module (history of each transation)
+  - Payment gateway (to pay via cards)
+  - Product (Type of product, quantity available)
+  - Vendor/Seller (details on who is selling)
+  - Price Calculation module (calculates price based on discounts, tax, shipping charges etc.)
+  - Session manager (keeps track of who's logged in and the cart details)
+  - View module (to render cart, item pages etc.)
+
+Capabilities:
+  Documenting all the features here based on happy, sad, bad paths.
+
+  Feature: CRUD operations in cart
+    As a shopper
+    I should be able to add an item into the cart
+    So that I can buy it.
+
+    Happy scenario:
+
+      Given that I am on a product page
+      When I click on the "Add to cart" button
+      And specify quantity as \d+
+      Then add \d+ items of the product into the cart
+
+      Given that I am on the cart page page
+      When I can edit quantity field for the item
+      Then show a message "Quantity modified"
+
+      Given that I am on the cart page page
+      When I click on "-" or "remove" button for an Item
+      Then remove the item from the cart
+      And show a message "Item removed"
+
+
+
+    Sad scenario:
+
+      Given that I am on a product page
+      When I click on the "Add to cart" button
+      And specify quantity as \d+
+      Then show a message "quantity \d+ unavailable"
+
+      Given that I am on a product page
+      When I click on the "Add to cart" button
+      And the item is already present in the cart
+      Then increase the quantity of the existing Item
+      And show a message "\d+ quantities of item \w+ was added"
+
+    Bad scenario:
+      Given that I am on any page
+      When I click on cart page
+      Then I should not see any items that I have not added.
+
+
+  Feature: Navigation to pages
+
+    Happy Scenario:
+      Given that I am on any page
+      And I can see a cart icon on the page
+      When I click on cart icon in the page
+      Then I should navigate to the cart page
+      And see items that I have added
+
+      Given that I am on cart page
+      When I click on an Item
+      Then I see the Item page with description on the item
+
+  Feature: Add user details
+
+    Happy Scenario:
+      Given that I am on the cart page
+      When input my address in the address field
+      Then the shipment address should be updated for the invoice
+
+      Given that I have logged into the site
+      And I am on the user account page
+      When input my address in the address field
+      Then save the address in my user account
+
+
+  Feature: price calculations
+
+    Happy scenario:
+      Given I am on cart page
+      When add address manually or from my user account
+      Then auto calculate the tax and shipping charges
+
+      Given that I am on cart page
+      When I enter a coupon code
+      Then Check if coupon code is valid
+      And calculate discount
+      And show the new amount
+
+    Sad scenario:
+      Given that I am on cart page
+      When I enter a invalid coupon code
+      Then show a message "Invalid message"
+      And do not change the total amount of invoice
+
+  Feature: Session management
+
+    Happy scenario:
+      Given that the I am logged in
+      When goto the cart page
+      Then show all the products which were previously added
+
+    Sad scenario:
+      Given that I have not logged in
+      When I goto the cart page
+      Then check the browser cookie for my details
+      And show a message "Login as \w+ to continue."
+      And show a message "Not \w+?"
+
+      Given that I have not logged in
+      And no user details are found in the browser cookies
+      When I goto the cart page
+      Then show the products stored in the local memory
+    

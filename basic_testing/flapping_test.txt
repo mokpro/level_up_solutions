@@ -1,0 +1,18 @@
+Flapping tests, what are they?
+Flapping tests are tests that seem to fail randomly. This could be because of race conditions in the test which may have different winner.
+It could also be due to the sequence of execution of test (which not matter!). Since these seemingly random tests failure generally pass on dev environment or disappear when they are rerun, makes us think that it won't occur again and there is nothing wrong in the test which was written.
+
+How to identify and fix these problems?
+Happens when the tests are written which include:
+  - Browser tests
+    Should not assume that the page is loaded or markup exists. Always checks if things are loaded before assertions and add longer "wait" in tests.
+  - Race conditions
+    While running code which can execute in parallel, assuming that a sequence of events occur in same order is wrong. Example Ajax requests. Solution is to wait till all Ajax calls are done.
+  - Shared resource access:
+    While accessing same resource, make sure that each test sees the same state. Solution: use fixtures.
+  - Generating test data
+    While generating test data for a form, using a hardcoded example is not great. Use gems like faker to generate random data and test them.
+  - Time zone issues
+    Make sure that all the time related test code are aware of the time zone.
+  - External dependencies
+    Make sure that the test are run without doing calls to external API's. this helps to find actual flappy test in our code.

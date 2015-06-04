@@ -1,0 +1,5 @@
+What are the two types of testing?
+
+- Unit : Does not worry about the other part of the code
+- Functional: worries about other parts of the code.
+haven't written integration tests

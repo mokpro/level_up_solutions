@@ -1,0 +1,7 @@
+For what type of tests do we use Capybara?
+Helpful to test the app from browser perspective. We can simulate all the clicks and the links and follow all paths.
+The weakness would be in handling race conditions due to ajax requests and other concurrent processing.
+
+What are drivers?
+It's like a plugin used by Capybara. Default drivers are I think well supported and are faster.
+Optional drivers like javascript drivers are used when there is a need for it.

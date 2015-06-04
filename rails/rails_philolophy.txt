@@ -1,0 +1,4 @@
+Convention over configuration, how it helps a group?
+
+With rails, any new developer familiar with the rails convention, can easily locate and read the code.
+Although each developer has slightly different styles, following rails convention helps to write consistent code.
